@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block main %}
+    <!-- Banner Style One Start -->
+    <section class="banner-style-one">
+        <div class="parallax" style="background-image: url({{ service.background_image.url }});"></div>
+        <div class="container">
+            <div class="row">
+                <div class="banner-details">
+                    <h2>{{ service.title }}</h2>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrums">
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <p>{{ service.breadcrumb_home }}</p>
+                            </a>
+                        </li>
+                        <li class="current">
+                            <p>{{ service.breadcrumb_title }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Banner Style One End -->
+
+    <!-- Service Style One Start -->
+    <section class="gap service-style-one">
+        <div class="container">
+            <div class="row">
+                {% for service in services %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                        <div class="service-data">
+                            <div class="svg-icon d-flex-all">
+                                {% if service.image %}
+                                    <img src="{{ service.image.url }}" alt="{{ service.title }}" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                                {% else %}
+                                    <!-- Default Image if no image exists -->
+                                    <img src="path/to/default-image.jpg" alt="Default Image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                                {% endif %}
+                            </div>
+                            <h3><a href="{{ service.link }}">{{ service.title }}</a></h3>
+                            <p>{{ service.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="gap no-top counter-style-one">
+        <div class="container">
+            <div class="row">
+                {% for counter in counters %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="counter-data {% if forloop.counter|divisibleby:2 %}upper-space{% endif %}">
+                        <div class="count">
+                            <span class="counter">{{ counter.number }}</span>{{ counter.suffix }}
+                            <i>{{ counter.label }}</i>
+                        </div>
+                        <h4>{{ counter.description }}</h4>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Video PopUp Start -->
+    
+    <section class="gap renovation">    
+        <!-- Background Image -->
+        {% for feature in features %}
+        <div class="parallax" style="background-image: url({{ feature.image.url }}); height: 500px; background-size: cover; background-position: center;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="reno-data">
+                        <!-- Title -->
+                        <h3>{{ feature.title }}</h3>
+                        <!-- Description -->
+                        <p>{{ renovation_info.description }}</p>
+                        <!-- Circle Image -->
+                        <div class="bbtn">
+                            <figure>
+                                <a data-fancybox="video" href="{% if feature.video_link %}{{ feature.video_link }}{% else %}{{ feature.video_file.url }}{% endif %}">
+                                    <button class="video-btn" style="background-color: #FFED02; color: black; font-size: 16px; padding: 12px 24px; border: none; border-radius: 25px; cursor: pointer; text-align: center; transition: background-color 0.3s ease;">
+                                        Watch Video
+                                    </button>
+                                    
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    
+    
+    
+    
+
+    <!-- Service Style Two Start -->
+    <section class="gap service-style-two">
+        <div class="heading">
+            <span>Offering</span>
+            <h2>Our Services</h2>
+        </div>
+        <div class="container">
+            <div class="row g-0">
+                {% for offering in offerings %}
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-two-box">
+                            <img src="{{ offering.image.url }}" alt="{{ offering.title }}" style="width: 250PX; height: 150px; object-fit: cover; clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);">
+                            <h3><a href="{{ offering.link }}">{{ offering.title }}</a></h3>
+                            <p>{{ offering.description }}</p>
+                            
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Service Style Two End -->
+
+  
+ {% endblock main %}

@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-11 17:44+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\contact\templates\contact.html:44
+msgid "How can we help?"
+msgstr "How can we help?"
+
+#: .\contact\templates\contact.html:45
+msgid ""
+"Have questions or want to chat? Fill out our contact form, and we’ll put you "
+"in touch with the right people."
+msgstr "Have questions or want to chat? Fill out our contact form, and we’ll put you in touch with the right people."
+
+#: .\contact\templates\contact.html:71
+msgid "Send Message"
+msgstr "Send Message"
+
+#: .\contact\templates\contact.html:100
+msgid "Address:"
+msgstr "Address"
+
+#: .\contact\templates\contact.html:107
+msgid "Telephone:"
+msgstr "Telephone:"
+
+#: .\contact\templates\contact.html:115
+msgid "Email:"
+msgstr "Email:"
+
+#: .\contact\templates\contact.html:137
+msgid "Frequently asked question"
+msgstr "Frequently asked question"
+
+#: .\templates\layout.html:88 .\templates\layout.html:128
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\layout.html:89 .\templates\layout.html:129
+msgid "About"
+msgstr "About"
+
+#: .\templates\layout.html:90 .\templates\layout.html:130
+msgid "Service"
+msgstr "Service"
+
+#: .\templates\layout.html:91 .\templates\layout.html:131
+#: .\templates\layout.html:223
+msgid "Contact"
+msgstr "Contact"
+
+#: .\templates\layout.html:215
+msgid "Information"
+msgstr "Information"
+
+#: .\templates\layout.html:242
+msgid "Follow Us"
+msgstr "Follow Us"
